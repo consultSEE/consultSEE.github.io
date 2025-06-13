@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultora SEE - Soluciones Estratégicas Empresariales</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+    }
+
+    /* Header */
+    .header {
+        background: linear-gradient(135deg, #2c5282 0%, #3182ce 50%, #4299e1 100%);
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .logo img {
+        height: 50px;
+        width: auto;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .logo img:hover {
+        transform: scale(1.05);
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    .nav-menu a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+    }
+
+    .nav-menu a:hover {
+        background: rgba(255,255,255,0.1);
+        transform: translateY(-2px);
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #3182ce 100%);
+        color: white;
+        padding: 120px 0 80px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.03)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.04)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        opacity: 0.3;
+    }
+
+    .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        margin-bottom: 1rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .hero .subtitle {
+        font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-size: 1.1rem;
+        border: 2px solid transparent;
+    }
+
+    .btn-primary {
+        background: linear-gradient(45deg, #48bb78, #38a169);
+        color: white;
+        box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid rgba(255,255,255,0.3);
+        backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+        background: rgba(255,255,255,0.1);
+        border-color: rgba(255,255,255,0.5);
+        transform: translateY(-2px);
+    }
+
+    /* About Section */
+    .about {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: #2d3748;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    .section-title h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(45deg, #3182ce, #4299e1);
+        border-radius: 2px;
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #4a5568;
+    }
+
+    .about-text p {
+        margin-bottom: 1.5rem;
+    }
+
+    .about-stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .stat-item {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .stat-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #3182ce;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        color: #4a5568;
+        font-weight: 500;
+    }
+
+    /* Services Section */
+    .services {
+        padding: 80px 0;
+        background: white;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .service-card {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        padding: 2.5rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border: 1px solid #e2e8f0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(45deg, #3182ce, #4299e1, #48bb78);
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    }
+
+    .service-icon {
+        font-size: 3rem;
+        color: #3182ce;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.5rem;
+        color: #2d3748;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    .service-card p {
+        color: #4a5568;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-features {
+        list-style: none;
+    }
+
+    .service-features li {
+        color: #4a5568;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .service-features li::before {
+        content: '✓';
+        color: #48bb78;
+        font-weight: bold;
+    }
+
+    /* Vision & Mission */
+    .vision-mission {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+        color: white;
+    }
+
+    .vm-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+
+    .vm-card {
+        background: rgba(255,255,255,0.1);
+        padding: 3rem;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .vm-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .vm-card h3 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .vm-card p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        opacity: 0.9;
+    }
+
+    /* Values */
+    .values {
+        padding: 80px 0;
+        background: #f7fafc;
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .value-card {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border-top: 4px solid #3182ce;
+    }
+
+    .value-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    }
+
+    .value-icon {
+        font-size: 3rem;
+        color: #3182ce;
+        margin-bottom: 1.5rem;
+    }
+
+    .value-card h4 {
+        font-size: 1.3rem;
+        color: #2d3748;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    .value-card p {
+        color: #4a5568;
+        line-height: 1.6;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+        color: white;
+    }
+
+    .contact-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem;
+        background: rgba(255,255,255,0.1);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease;
+    }
+
+    .contact-item:hover {
+        transform: translateX(10px);
+    }
+
+    .contact-icon {
+        font-size: 1.5rem;
+        color: #48bb78;
+        min-width: 30px;
+    }
+
+    .contact-details h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: #e2e8f0;
+    }
+
+    .contact-details p {
+        color: white;
+        font-weight: 500;
+    }
+
+    /* Footer */
+    .footer {
+        background: #1a202c;
+        color: #e2e8f0;
+        padding: 3rem 0 1rem;
+        text-align: center;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .footer p {
+        margin-bottom: 1rem;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+
+    .social-links a {
+        color: #e2e8f0;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+        color: #48bb78;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #2c5282;
+            flex-direction: column;
+            padding: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu-btn {
+            display: block;
+        }
+
+        .hero {
+            padding: 100px 0 60px;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+        }
+
+        .about-stats {
+            grid-template-columns: 1fr;
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .vm-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .values-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .contact-content {
+            grid-template-columns: 1fr;
+        }
+
+        .nav-container {
+            padding: 0 1rem;
+        }
+
+        .container {
+            padding: 0 1rem;
+        }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .fade-in-up {
+        animation: fadeInUp 0.6s ease-out;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background: #25d366;
+        color: white;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 24px;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        z-index: 1000;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        color: white;
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        background: linear-gradient(45deg, #48bb78, #38a169);
+        z-index: 9999;
+        transition: width 0.1s ease;
+    }
+</style>
+```
+
+</head>
+<body>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+```
+<!-- Header -->
+<header class="header">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="https://i.postimg.cc/Wh1m5gx6/CONSULTORA.png" alt="SEE Logo" title="¡Escríbenos por WhatsApp!" onclick="window.open('https://wa.me/51976611316?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios', '_blank')">
+            <div style="display: none; text-align: center; padding: 20px; color: #666;">
+                <h3>CONSULTORA SEE S.R.L.</h3>
+                <p>Soluciones Estratégicas Empresariales</p>
+            </div>
+        </div>
+        <nav class="nav-menu" id="navMenu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </nav>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <h1 class="fade-in-up">CONSULTORA SEE S.R.L.</h1>
+        <p class="subtitle fade-in-up">¡Transformamos desafíos en soluciones estratégicas!</p>
+        <p class="subtitle fade-in-up">Soluciones Estratégicas Empresariales con más de 20 años de experiencia</p>
+        <div class="cta-buttons fade-in-up">
+            <a href="https://wa.me/51976611316?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios" class="btn btn-primary" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                Contáctanos
+            </a>
+            <a href="#" class="btn btn-secondary" onclick="alert('Por favor, proporciona el enlace de tu presentación de OneDrive para habilitar esta funcionalidad.')">
+                <i class="fas fa-file-alt"></i>
+                Conócenos
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="nosotros">
+    <div class="container">
+        <div class="section-title">
+            <h2>Nosotros</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Somos un equipo de consultores multidisciplinarios con amplia experiencia en los sectores público y privado, habiendo desarrollado exitosamente diversos proyectos con más de 20 años de experiencia.</p>
+                
+                <p>En <strong>Consultora Soluciones Estratégicas Empresariales S.R.L.</strong>, ofrecemos servicios especializados de consultoría, auditoría, asesoramiento, asistencia técnica y servicios generales en distintas áreas clave para el desarrollo empresarial.</p>
+                
+                <p>Nos enfocamos en brindar soluciones integrales, adaptadas a las necesidades específicas de cada organización, con un enfoque basado en normas internacionales y mejores prácticas.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">14</div>
+                    <div class="stat-label">Años con Gold Fields</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">ISO</div>
+                    <div class="stat-label">Certificaciones</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Comprometidos</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Vision & Mission -->
+<section class="vision-mission">
+    <div class="container">
+        <div class="section-title">
+            <h2 style="color: white;">Visión y Misión</h2>
+        </div>
+        <div class="vm-grid">
+            <div class="vm-card">
+                <h3><i class="fas fa-eye"></i> Visión</h3>
+                <p>Ser una empresa líder en consultoría profesional, reconocida por desarrollar y brindar herramientas efectivas que faciliten la toma de decisiones estratégicas. Aspiramos a generar valor mediante el trabajo conjunto con nuestros clientes, garantizando la satisfacción de sus necesidades y superando sus expectativas.</p>
+            </div>
+            <div class="vm-card">
+                <h3><i class="fas fa-bullseye"></i> Misión</h3>
+                <p>Somos una empresa consultora comprometida con brindar servicios de alta calidad en administración, sistemas de gestión integrados, desarrollo de sistemas de información a medida y ejecución de proyectos de desarrollo e inversión, aportando al desarrollo nacional, con soluciones efectivas y personalizadas, con el objetivo de promover la mejora continua en cada organización que acompañamos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values -->
+<section class="values">
+    <div class="container">
+        <div class="section-title">
+            <h2>Nuestros Valores</h2>
+            <p>Los principios que guían todas nuestras relaciones y sustentan nuestro compromiso con la excelencia.</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-user-tie"></i></div>
+                <h4>Profesionalismo</h4>
+                <p>Actuamos con responsabilidad, ética y compromiso en cada proyecto, asegurando resultados de calidad y un alto nivel técnico.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                <h4>Innovación</h4>
+                <p>Buscamos constantemente nuevas ideas, enfoques y soluciones para adaptarnos a los cambios y generar valor sostenible.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                <h4>Honestidad</h4>
+                <p>Construimos relaciones basadas en la transparencia, la confianza y la integridad en todas nuestras acciones.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-users"></i></div>
+                <h4>Respeto</h4>
+                <p>Fomentamos un ambiente inclusivo, equitativo y colaborativo, reconociendo la diversidad y valorando a cada persona.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services" id="servicios">
+    <div class="container">
+        <div class="section-title">
+            <h2>Nuestros Servicios</h2>
+            <p>Brindamos soluciones especializadas en consultoría, auditoría, asesoría y asistencia técnica para fortalecer a las organizaciones.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Gestión de Seguridad y Salud en el Trabajo (SST)</h3>
+                <p>Implementamos sistemas de gestión en SST conforme a normas ISO 45001.</p>
+                <ul class="service-features">
+                    <li>Diseño e implementación de sistemas de gestión en SST</li>
+                    <li>Auditoría de cumplimiento legal e ISO</li>
+                    <li>Capacitación en prevención de riesgos laborales</li>
+                    <li>Evaluación de cumplimiento legal en seguridad ocupacional</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-leaf"></i></div>
+                <h3>Gestión Ambiental</h3>
+                <p>Soluciones ambientales integrales basadas en ISO 14001.</p>
+                <ul class="service-features">
+                    <li>Diseño e implementación de sistemas de gestión ambiental</li>
+                    <li>Evaluación de aspectos e impactos ambientales</li>
+                    <li>Auditorías de cumplimiento ambiental</li>
+                    <li>Programas de manejo de residuos, agua y energía</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Gestión de Energía</h3>
+                <p>Optimización energética conforme a ISO 50001.</p>
+                <ul class="service-features">
+                    <li>Diseño e implementación de sistemas de gestión energética</li>
+                    <li>Auditorías internas ISO</li>
+                    <li>Identificación de oportunidades de mejora en eficiencia energética</li>
+                    <li>Capacitación en cultura energética empresarial</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-award"></i></div>
+                <h3>Gestión de la Calidad</h3>
+                <p>Sistemas de calidad basados en ISO 9001.</p>
+                <ul class="service-features">
+                    <li>Diseño e implementación de sistemas de gestión de calidad</li>
+                    <li>Mejora de procesos</li>
+                    <li>Auditorías internas</li>
+                    <li>Capacitación en calidad y enfoque al cliente</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-ban"></i></div>
+                <h3>Gestión Antisoborno y Anticorrupción</h3>
+                <p>Sistemas de integridad basados en ISO 37001.</p>
+                <ul class="service-features">
+                    <li>Diseño e implementación de sistema antisoborno</li>
+                    <li>Evaluaciones de riesgos de corrupción y soborno</li>
+                    <li>Auditorías internas del sistema</li>
+                    <li>Capacitación en ética empresarial y cumplimiento</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-heart"></i></div>
+                <h3>Gestión Social y Responsabilidad Empresarial</h3>
+                <p>Desarrollo de estrategias de responsabilidad social basadas en ISO 26000.</p>
+                <ul class="service-features">
+                    <li>Diagnósticos de impacto social y gestión participativa</li>
+                    <li>Estrategias de relacionamiento con grupos de interés</li>
+                    <li>Políticas y programas de responsabilidad social empresarial</li>
+                    <li>Prevención y gestión de conflictos socioambientales</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Soluciones Tecnológicas</h3>
+                <p>Desarrollo de software y plataformas digitales a medida.</p>
+                <ul class="service-features">
+                    <li>Desarrollo de software a medida</li>
+                    <li>Creación y gestión integral de aplicaciones web</li>
+                    <li>Diseño gráfico enfocado en entornos digitales</li>
+                    <li>Servicios generales en computación y sistemas</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <h3>Capacitación Especializada</h3>
+                <p>Cursos y talleres para mandos medios y operativos.</p>
+                <ul class="service-features">
+                    <li>Seguridad y salud ocupacional</li>
+                    <li>Medio ambiente y sostenibilidad</li>
+                    <li>Gestión social y comunitaria</li>
+                    <li>Antisoborno y ética empresarial</li>
+                    <li>Normas ISO aplicadas al sector minero</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-digital-tachograph"></i></div>
+                <h3>Transformación Digital</h3>
+                <p>Digitalización de procesos y gestión documental.</p>
+                <ul class="service-features">
+                    <li>Digitalización de procesos operativos y administrativos</li>
+                    <li>Implementación de plataformas para seguimiento de indicadores</li>
+                    <li>Desarrollo de dashboards e informes en tiempo real</li>
+                    <li>Sistemas de gestión documental alineados con normas ISO</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-tasks"></i></div>
+                <h3>Supervisión de Proyectos</h3>
+                <p>Gestión y control de contratistas y proyectos.</p>
+                <ul class="service-features">
+                    <li>Monitoreo del cumplimiento de estándares por subcontratistas</li>
+                    <li>Evaluación de desempeño de contratistas</li>
+                    <li>Auditorías técnicas y operativas en campo</li>
+                    <li>Implementación de sistemas de control de proyectos (KPIs, cronogramas)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contacto">
+    <div class="container">
+        <div class="section-title">
+            <h2 style="color: white;">Contáctenos</h2>
+            <p style="color: #e2e8f0;">Estamos aquí para ayudarte a transformar tus desafíos en soluciones estratégicas.</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-details">
+                        <h4>Teléfono</h4>
+                        <p>976 611316</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-details">
+                        <h4>Dirección</h4>
+                        <p>Jr. Inca Yupanqui 232 – Baños Del Inca – Cajamarca</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-details">
+                        <h4>Email Principal</h4>
+                        <p>Help.desk@consultorasee.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-details">
+                        <h4>Email Alternativo</h4>
+                        <p>Consultora.see@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-section">
+                <div style="background: rgba(255,255,255,0.1); padding: 3rem; border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: white; margin-bottom: 2rem; text-align: center;">
+                        <i class="fab fa-whatsapp" style="color: #25d366; margin-right: 10px;"></i>
+                        Escríbenos por WhatsApp
+                    </h3>
+                    <p style="color: #e2e8f0; text-align: center; margin-bottom: 2rem; line-height: 1.6;">
+                        ¿Necesitas una consulta inmediata? Contáctanos directamente por WhatsApp y te responderemos en el menor tiempo posible.
+                    </p>
+                    <div style="text-align: center;">
+                        <a href="https://wa.me/51976611316?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20consultoría" 
+                           class="btn btn-primary" 
+                           target="_blank" 
+                           style="display: inline-flex; align-items: center; gap: 10px; font-size: 1.2rem; padding: 1.2rem 2.5rem;">
+                            <i class="fab fa-whatsapp"></i>
+                            Iniciar Conversación
+                        </a>
+                    </div>
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <div style="display: inline-flex; align-items: center; gap: 10px; color: #48bb78;">
+                            <i class="fas fa-clock"></i>
+                            <span>Respuesta rápida garantizada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+            <div>
+                <h4 style="color: white; margin-bottom: 1rem;">Consultora SEE S.R.L.</h4>
+                <p>Transformamos desafíos en soluciones estratégicas</p>
+                <p>Más de 20 años de experiencia en consultoría empresarial</p>
+            </div>
+            <div>
+                <h4 style="color: white; margin-bottom: 1rem;">Servicios Principales</h4>
+                <ul style="list-style: none; text-align: left;">
+                    <li>• Sistemas de Gestión ISO</li>
+                    <li>• Auditorías y Consultoría</li>
+                    <li>• Soluciones Tecnológicas</li>
+                    <li>• Capacitación Empresarial</li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color: white; margin-bottom: 1rem;">Contacto Directo</h4>
+                <p><i class="fas fa-phone"></i> 976 611316</p>
+                <p><i class="fas fa-envelope"></i> Help.desk@consultorasee.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Cajamarca, Perú</p>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="https://wa.me/51976611316" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:Help.desk@consultorasee.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+51976611316" title="Teléfono">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+        <hr style="border: 1px solid #4a5568; margin: 2rem 0;">
+        <p>&copy; 2024 Consultora SEE S.R.L. - Soluciones Estratégicas Empresariales. Todos los derechos reservados.</p>
+        <p style="font-size: 0.9rem; opacity: 0.8;">Cajamarca, Perú | RUC: [Número de RUC] | 14 años de experiencia con Minera Gold Fields</p>
+    </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/51976611316?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios" 
+   class="whatsapp-float" 
+   target="_blank" 
+   title="¡Contáctanos por WhatsApp!">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                // Close mobile menu if open
+                navMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        });
+    });
+
+    // Scroll indicator
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.body.offsetHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        document.getElementById('scrollIndicator').style.width = scrollPercent + '%';
+    });
+
+    // Header background on scroll
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 100) {
+            header.style.background = 'rgba(44, 82, 130, 0.95)';
+            header.style.backdropFilter = 'blur(10px)';
+        } else {
+            header.style.background = 'linear-gradient(135deg, #2c5282 0%, #3182ce 50%, #4299e1 100%)';
+            header.style.backdropFilter = 'none';
+        }
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-up');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+
+    // WhatsApp floating button animation
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    
+    // Pulse animation
+    setInterval(() => {
+        whatsappBtn.style.animation = 'pulse 1s ease-in-out';
+        setTimeout(() => {
+            whatsappBtn.style.animation = '';
+        }, 1000);
+    }, 5000);
+
+    // Add pulse keyframes
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Console log for debugging
+    console.log('Consultora SEE Website loaded successfully!');
+    console.log('Contact: 976 611316 | Email: Help.desk@consultorasee.com');
+</script>
+```
+
+</body>
+</html>
